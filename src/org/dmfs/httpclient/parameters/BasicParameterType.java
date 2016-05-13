@@ -28,7 +28,7 @@ import org.dmfs.httpclient.typedentity.EntityConverter;
  * @param <ValueType>
  *            The type of the parameter value.
  */
-public final class SimpleParameterType<ValueType> implements ParameterType<ValueType>
+public final class BasicParameterType<ValueType> implements ParameterType<ValueType>
 {
 	private final String mName;
 	private final EntityConverter<ValueType> mConverter;
@@ -42,7 +42,7 @@ public final class SimpleParameterType<ValueType> implements ParameterType<Value
 	 * @param converter
 	 *            A {@link EntityConverter} to convert parameter values from/to string.
 	 */
-	public SimpleParameterType(String name, EntityConverter<ValueType> converter)
+	public BasicParameterType(String name, EntityConverter<ValueType> converter)
 	{
 		mName = name;
 		mConverter = converter;
@@ -59,7 +59,7 @@ public final class SimpleParameterType<ValueType> implements ParameterType<Value
 	@Override
 	public Parameter<ValueType> entityFromString(String valueString)
 	{
-		return new SimpleParameter<ValueType>(this, valueFromString(valueString));
+		return new BasicParameter<ValueType>(this, valueFromString(valueString));
 	}
 
 
@@ -73,7 +73,7 @@ public final class SimpleParameterType<ValueType> implements ParameterType<Value
 	@Override
 	public Parameter<ValueType> entity(ValueType value)
 	{
-		return new SimpleParameter<ValueType>(this, value);
+		return new BasicParameter<ValueType>(this, value);
 	}
 
 

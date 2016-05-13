@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.dmfs</groupId>
 	<artifactId>http-client-types</artifactId>
-	<version>0.5</version>
+	<version>0.6</version>
 	<packaging>jar</packaging>
 	<name>http-client-types</name>
 	<description>Common header &amp; parameter types for http-client-essentials.</description>
@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>org.dmfs</groupId>
 			<artifactId>http-client-essentials</artifactId>
-			<version>0.5</version>
+			<version>0.6</version>
 		</dependency>
 
 	</dependencies>

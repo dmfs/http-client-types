@@ -34,15 +34,15 @@ import org.dmfs.httpclient.types.MediaType;
  */
 public final class Parameters
 {
-	public final static ParameterType<String> CHARSET = new SimpleParameterType<String>("charset", QuotedStringConverter.INSTANCE);
+	public final static ParameterType<String> CHARSET = new BasicParameterType<String>("charset", QuotedStringConverter.INSTANCE);
 
-	public final static ParameterType<String> TITLE = new SimpleParameterType<String>("title", QuotedStringConverter.INSTANCE);
+	public final static ParameterType<String> TITLE = new BasicParameterType<String>("title", QuotedStringConverter.INSTANCE);
 
-	public final static ParameterType<MediaType> TYPE = new SimpleParameterType<MediaType>("type", MediaTypeConverter.INSTANCE);
+	public final static ParameterType<MediaType> TYPE = new BasicParameterType<MediaType>("type", MediaTypeConverter.INSTANCE);
 
-	public final static ParameterType<Locale> HREFLANG = new SimpleParameterType<Locale>("hreflang", LanguageTagConverter.INSTANCE);
+	public final static ParameterType<Locale> HREFLANG = new BasicParameterType<Locale>("hreflang", LanguageTagConverter.INSTANCE);
 
-	public final static ParameterType<URI> ANCHOR = new SimpleParameterType<URI>("anchor", UriConverter.INSTANCE);
+	public final static ParameterType<URI> ANCHOR = new BasicParameterType<URI>("anchor", UriConverter.INSTANCE);
 
 
 	/**

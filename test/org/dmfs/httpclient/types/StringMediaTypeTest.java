@@ -131,9 +131,9 @@ public class StringMediaTypeTest
 		assertFalse(new StringMediaType("application/xml").equals(new StringMediaType("Application/json; charset=\"UTF-8\"")));
 
 		// equals works with other MediaType implementations
-		assertTrue(new StringMediaType("application/xml").equals(new SimpleMediaType("application", "xml")));
-		assertTrue(new StringMediaType("application/xml").equals(new SimpleMediaType("Application", "xml")));
-		assertFalse(new StringMediaType("application/xml").equals(new SimpleMediaType("Application", "json")));
+		assertTrue(new StringMediaType("application/xml").equals(new StructuredMediaType("application", "xml")));
+		assertTrue(new StringMediaType("application/xml").equals(new StructuredMediaType("Application", "xml")));
+		assertFalse(new StringMediaType("application/xml").equals(new StructuredMediaType("Application", "json")));
 
 	}
 }

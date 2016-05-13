@@ -25,7 +25,7 @@ package org.dmfs.httpclient.parameters;
  * @param <ValueType>
  *            The parameter value type.
  */
-public final class SimpleParameter<ValueType> implements Parameter<ValueType>
+public final class BasicParameter<ValueType> implements Parameter<ValueType>
 {
 	private final ValueType mValue;
 	private final ParameterType<ValueType> mType;
@@ -39,7 +39,7 @@ public final class SimpleParameter<ValueType> implements Parameter<ValueType>
 	 * @param value
 	 *            The parameter value.
 	 */
-	public SimpleParameter(ParameterType<ValueType> type, ValueType value)
+	public BasicParameter(ParameterType<ValueType> type, ValueType value)
 	{
 		mType = type;
 		mValue = value;

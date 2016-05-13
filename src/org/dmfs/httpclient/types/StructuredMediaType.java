@@ -35,7 +35,7 @@ import org.dmfs.iterators.FilteredIterator;
  * 
  * @author Marten Gajda <marten@dmfs.org>
  */
-public final class SimpleMediaType implements MediaType
+public final class StructuredMediaType implements MediaType
 {
 	private final String mMainType;
 	private final String mSubType;
@@ -50,7 +50,7 @@ public final class SimpleMediaType implements MediaType
 	 * @param subtype
 	 *            The subtype of the media.
 	 */
-	public SimpleMediaType(String maintype, String subtype)
+	public StructuredMediaType(String maintype, String subtype)
 	{
 		this(maintype, subtype, false);
 	}
@@ -66,7 +66,7 @@ public final class SimpleMediaType implements MediaType
 	 * @param charset
 	 *            The character set of the media.
 	 */
-	public SimpleMediaType(String maintype, String subtype, String charset)
+	public StructuredMediaType(String maintype, String subtype, String charset)
 	{
 		this(maintype, subtype, false, Parameters.CHARSET.entity(charset));
 	}
@@ -82,13 +82,13 @@ public final class SimpleMediaType implements MediaType
 	 * @param parameters
 	 *            A list of {@link Parameter}.
 	 */
-	public SimpleMediaType(String maintype, String subtype, Parameter<?>... parameters)
+	public StructuredMediaType(String maintype, String subtype, Parameter<?>... parameters)
 	{
 		this(maintype, subtype, true, parameters);
 	}
 
 
-	private SimpleMediaType(String maintype, String subtype, boolean cloneParameters, Parameter<?>... parameters)
+	private StructuredMediaType(String maintype, String subtype, boolean cloneParameters, Parameter<?>... parameters)
 	{
 		// MediaTypes are case insensitive, so we convert them to lower case for easier comparison
 		mMainType = maintype.toLowerCase(Locale.ENGLISH);
