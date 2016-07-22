@@ -15,14 +15,15 @@
  * limitations under the License.
  */
 
-package org.dmfs.httpclient.types;
+package org.dmfs.httpessentials.types;
 
 import java.util.Iterator;
 import java.util.Locale;
 
-import org.dmfs.httpclient.parameters.Parameter;
-import org.dmfs.httpclient.parameters.ParameterType;
-import org.dmfs.httpclient.parameters.Parameters;
+import org.dmfs.httpessentials.parameters.Parameter;
+import org.dmfs.httpessentials.parameters.ParameterType;
+import org.dmfs.httpessentials.parameters.Parameters;
+import org.dmfs.httpessentials.types.MediaType;
 import org.dmfs.iterators.AbstractConvertedIterator.Converter;
 import org.dmfs.iterators.AbstractFilteredIterator.IteratorFilter;
 import org.dmfs.iterators.ArrayIterator;

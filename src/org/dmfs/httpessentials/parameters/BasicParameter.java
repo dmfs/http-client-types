@@ -15,7 +15,11 @@
  * limitations under the License.
  */
 
-package org.dmfs.httpclient.parameters;
+package org.dmfs.httpessentials.parameters;
+
+import org.dmfs.httpessentials.parameters.Parameter;
+import org.dmfs.httpessentials.parameters.ParameterType;
+
 
 /**
  * A basic {@link Parameter} implementation.

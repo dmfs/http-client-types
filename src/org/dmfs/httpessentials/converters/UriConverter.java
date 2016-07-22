@@ -15,33 +15,34 @@
  * limitations under the License.
  */
 
-package org.dmfs.httpclient.converters;
+package org.dmfs.httpessentials.converters;
 
-import org.dmfs.httpclient.typedentity.EntityConverter;
-import org.dmfs.httpclient.types.MediaType;
-import org.dmfs.httpclient.types.StringMediaType;
+import java.net.URI;
+
+import org.dmfs.httpessentials.typedentity.EntityConverter;
 
 
 /**
- * {@link EntityConverter} for {@link MediaType}s.
+ * {@link EntityConverter} for {@link URI}s.
  * 
  * @author Marten Gajda <marten@dmfs.org>
  */
-public final class MediaTypeConverter implements EntityConverter<MediaType>
+public final class UriConverter implements EntityConverter<URI>
 {
-	public final static MediaTypeConverter INSTANCE = new MediaTypeConverter();
+	public final static UriConverter INSTANCE = new UriConverter();
 
 
 	@Override
-	public MediaType value(String mediaTypeString)
+	public URI value(String uriString)
 	{
-		return new StringMediaType(mediaTypeString.trim());
+		return URI.create(uriString.trim());
 	}
 
 
 	@Override
-	public String valueString(MediaType mediaType)
+	public String valueString(URI uri)
 	{
-		return mediaType.toString();
+		return uri.toASCIIString();
 	}
+
 }

@@ -15,34 +15,34 @@
  * limitations under the License.
  */
 
-package org.dmfs.httpclient.converters;
+package org.dmfs.httpessentials.converters;
 
-import org.dmfs.httpclient.typedentity.EntityConverter;
-import org.dmfs.httpclient.types.Link;
-import org.dmfs.httpclient.types.StringLink;
+import java.util.Locale;
+
+import org.dmfs.httpessentials.typedentity.EntityConverter;
 
 
 /**
- * Converts between String and {@link Link} values.
+ * {@link EntityConverter} for Language Tags ({@link Locale}s).
  * 
  * @author Marten Gajda <marten@dmfs.org>
  */
-public final class LinkConverter implements EntityConverter<Link>
+public final class LanguageTagConverter implements EntityConverter<Locale>
 {
-	public final static LinkConverter INSTANCE = new LinkConverter();
+	public final static LanguageTagConverter INSTANCE = new LanguageTagConverter();
 
 
 	@Override
-	public Link value(String headerValueString)
+	public Locale value(String languageTagString)
 	{
-		return new StringLink(headerValueString.trim());
+		return Locale.forLanguageTag(languageTagString.trim());
 	}
 
 
 	@Override
-	public String valueString(Link headerValue)
+	public String valueString(Locale locale)
 	{
-		throw new UnsupportedOperationException("serializing Links is not supported yet");
+		return locale.toLanguageTag();
 	}
 
 }

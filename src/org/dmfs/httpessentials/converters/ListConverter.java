@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.dmfs.httpclient.converters;
+package org.dmfs.httpessentials.converters;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.dmfs.httpclient.typedentity.EntityConverter;
+import org.dmfs.httpessentials.typedentity.EntityConverter;
 import org.dmfs.iterators.CsvIterator;
 
 

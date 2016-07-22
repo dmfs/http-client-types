@@ -4,7 +4,7 @@ Common header & parameter types for http-client-essentials.
 
 ## Requirements
 
-This library uses [http-client-essentials](https://github.com/dmfs/http-client-essentials).
+This library uses [http-client-essentials](https://github.com/dmfs/http-client-essentials) and [iterators](https://github.com/dmfs/iterators).
 
 ## License
 

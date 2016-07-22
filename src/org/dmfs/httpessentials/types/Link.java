@@ -15,13 +15,14 @@
  * limitations under the License.
  */
 
-package org.dmfs.httpclient.types;
+package org.dmfs.httpessentials.types;
 
 import java.net.URI;
 import java.util.Locale;
 import java.util.Set;
 
-import org.dmfs.httpclient.parameters.Parametrized;
+import org.dmfs.httpessentials.parameters.Parametrized;
+import org.dmfs.httpessentials.types.MediaType;
 
 
 /**

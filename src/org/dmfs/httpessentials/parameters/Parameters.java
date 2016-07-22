@@ -15,16 +15,17 @@
  * limitations under the License.
  */
 
-package org.dmfs.httpclient.parameters;
+package org.dmfs.httpessentials.parameters;
 
 import java.net.URI;
 import java.util.Locale;
 
-import org.dmfs.httpclient.converters.LanguageTagConverter;
-import org.dmfs.httpclient.converters.MediaTypeConverter;
-import org.dmfs.httpclient.converters.QuotedStringConverter;
-import org.dmfs.httpclient.converters.UriConverter;
-import org.dmfs.httpclient.types.MediaType;
+import org.dmfs.httpessentials.converters.LanguageTagConverter;
+import org.dmfs.httpessentials.converters.MediaTypeConverter;
+import org.dmfs.httpessentials.converters.QuotedStringConverter;
+import org.dmfs.httpessentials.converters.UriConverter;
+import org.dmfs.httpessentials.parameters.ParameterType;
+import org.dmfs.httpessentials.types.MediaType;
 
 
 /**

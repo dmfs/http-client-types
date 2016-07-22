@@ -1,4 +1,4 @@
-package org.dmfs.httpclient.types;
+package org.dmfs.httpessentials.types;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -6,8 +6,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Iterator;
 
-import org.dmfs.httpclient.parameters.Parameter;
-import org.dmfs.httpclient.parameters.Parameters;
+import org.dmfs.httpessentials.parameters.Parameter;
+import org.dmfs.httpessentials.parameters.Parameters;
+import org.dmfs.httpessentials.types.StringMediaType;
+import org.dmfs.httpessentials.types.StructuredMediaType;
 import org.junit.Test;
 
 

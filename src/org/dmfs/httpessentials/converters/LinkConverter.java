@@ -15,32 +15,34 @@
  * limitations under the License.
  */
 
-package org.dmfs.httpclient.converters;
+package org.dmfs.httpessentials.converters;
 
-import org.dmfs.httpclient.typedentity.EntityConverter;
+import org.dmfs.httpessentials.typedentity.EntityConverter;
+import org.dmfs.httpessentials.types.Link;
+import org.dmfs.httpessentials.types.StringLink;
 
 
 /**
- * Converts between String and {@link Integer} values.
+ * Converts between String and {@link Link} values.
  * 
  * @author Marten Gajda <marten@dmfs.org>
  */
-public final class IntegerConverter implements EntityConverter<Integer>
+public final class LinkConverter implements EntityConverter<Link>
 {
-	public final static IntegerConverter INSTANCE = new IntegerConverter();
+	public final static LinkConverter INSTANCE = new LinkConverter();
 
 
 	@Override
-	public Integer value(String headerValueString)
+	public Link value(String headerValueString)
 	{
-		return Integer.parseInt(headerValueString.trim());
+		return new StringLink(headerValueString.trim());
 	}
 
 
 	@Override
-	public String valueString(Integer headerValue)
+	public String valueString(Link headerValue)
 	{
-		return headerValue.toString();
+		throw new UnsupportedOperationException("serializing Links is not supported yet");
 	}
 
 }

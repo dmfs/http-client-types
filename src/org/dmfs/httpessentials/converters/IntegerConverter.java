@@ -15,34 +15,32 @@
  * limitations under the License.
  */
 
-package org.dmfs.httpclient.converters;
+package org.dmfs.httpessentials.converters;
 
-import java.util.Locale;
-
-import org.dmfs.httpclient.typedentity.EntityConverter;
+import org.dmfs.httpessentials.typedentity.EntityConverter;
 
 
 /**
- * {@link EntityConverter} for Language Tags ({@link Locale}s).
+ * Converts between String and {@link Integer} values.
  * 
  * @author Marten Gajda <marten@dmfs.org>
  */
-public final class LanguageTagConverter implements EntityConverter<Locale>
+public final class IntegerConverter implements EntityConverter<Integer>
 {
-	public final static LanguageTagConverter INSTANCE = new LanguageTagConverter();
+	public final static IntegerConverter INSTANCE = new IntegerConverter();
 
 
 	@Override
-	public Locale value(String languageTagString)
+	public Integer value(String headerValueString)
 	{
-		return Locale.forLanguageTag(languageTagString.trim());
+		return Integer.parseInt(headerValueString.trim());
 	}
 
 
 	@Override
-	public String valueString(Locale locale)
+	public String valueString(Integer headerValue)
 	{
-		return locale.toLanguageTag();
+		return headerValue.toString();
 	}
 
 }

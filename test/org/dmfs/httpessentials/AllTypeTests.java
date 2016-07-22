@@ -1,7 +1,7 @@
-package org.dmfs.httpclient;
+package org.dmfs.httpessentials;
 
-import org.dmfs.httpclient.types.StructuredMediaTypeTest;
-import org.dmfs.httpclient.types.StringMediaTypeTest;
+import org.dmfs.httpessentials.types.StringMediaTypeTest;
+import org.dmfs.httpessentials.types.StructuredMediaTypeTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
